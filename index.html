@@ -3,33 +3,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Colors Game</title>
+		<title>Hue Quest</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<!-- Latest compiled and minified CSS & JS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	<body>
 		<div class="container"></div>
-		<h1>The game.</h1>
+		<h1>Hue Quest</h1>
 		<div class="row">
-		<div class ="choose col-md-6">Choose your color
-		<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+		<div class ="choose col-md-12"><h3>Choose your color</h3><br>
 		<button class="bButton">Blue</button>
 		<!--<div id="blue" class="color"></div>-->
 		<button class="rButton">Red</button>
 		<!--<div id="red" class="color"></div>-->
 		<button class="oButton">Orange</button>
 		</div>
-		<div class ="chooseO col-md-6">Choose your opponent
-		<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+		<di
+		<div class ="chooseO col-md-12"><h3>Choose your opponent</h3><br>
 		<button class="obButton">Blue</button>
-		<!--<div id="blue" class="color"></div>-->
 		<button class="orButton">Red</button>
-		<!--<div id="red" class="color"></div>-->
 		<button class="ooButton">Orange</button>
 		</div>
-		<div class="urOChoice col-md-6"><h1>Your Color</h1></div>
 		</div>
+		<div class="row">
+		<div class="urChoice col-md-6"><h1>Your Color</h1></div>
+
+		<div class="urOChoice col-md-6 "><h1>Opponents Color</h1></div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="assets/javascript/game.js"></script>
 	</body>
 </html>

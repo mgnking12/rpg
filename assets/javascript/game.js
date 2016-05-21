@@ -20,61 +20,57 @@ $(document).ready(function(){
 	$('.bButton').on('click', function(){
     console.log('heeeeere');
     var $bBut = $(this);
-    $('.urChoice').append("<div id='blue' class='color'></div>");
+    $('.urChoice').append("<div id='blue' class='color center-block'></div>");
     attachEvents();
-    $bBut.css('display', 'none');
-    $('.rButton').css('display', 'none');
-    $('.oButton').css('display', 'none');
+    $('.choose').css('display', 'none');
+    $('.chooseO').css('display', 'inline-block');
+    $('.obButton').css('display', 'none');
   });
   
   $('.rButton').on('click', function(){
     console.log('heeeeere');
     var $rBut = $(this);
-    $('.urChoice').append("<div id='red' class='color'></div>");
+    $('.urChoice').append("<div id='red' class='color center-block'></div>");
     attachEvents();
-    $rBut.css('display', 'none');
-    $('.bButton').css('display', 'none');
-    $('.oButton').css('display', 'none');
+    $('.choose').css('display', 'none');
+    $('.chooseO').css('display', 'inline-block');
+    $('.orButton').css('display', 'none');
   });
 
   $('.oButton').on('click', function(){
     console.log('heeeeere');
     var $oBut = $(this);
-    $('.urChoice').append("<div id='orange' class='color'></div>");
+    $('.urChoice').append("<div id='orange' class='color center-block'></div>");
     attachEvents();
-    $oBut.css('display', 'none');
-    $('.rButton').css('display', 'none');
-    $('.bButton').css('display', 'none');
+    $('.choose').css('display', 'none');
+    $('.chooseO').css('display', 'inline-block');
+    $('.ooButton').css('display', 'none');
   });
+
+  //opponent
 
   $('.obButton').on('click', function(){
     console.log('heeeeere');
     var $bBut = $(this);
-    $('.urOChoice').append("<div id='blue' class='color'></div>");
+    $('.urOChoice').append("<div id='blue' class='color center-block'></div>");
     attachEvents();
-    $bBut.css('display', 'none');
-    $('.orButton').css('display', 'none');
-    $('.ooButton').css('display', 'none');
+    $('.chooseO').css('display', 'none');
   });
   
   $('.orButton').on('click', function(){
     console.log('heeeeere');
     var $rBut = $(this);
-    $('.urOChoice').append("<div id='red' class='color'></div>");
+    $('.urOChoice').append("<div id='red' class='color center-block'></div>");
     attachEvents();
-    $rBut.css('display', 'none');
-    $('.obButton').css('display', 'none');
-    $('.oButton').css('display', 'none');
+    $('.chooseO').css('display', 'none');
   });
 
   $('.ooButton').on('click', function(){
     console.log('heeeeere');
     var $oBut = $(this);
-    $('.urOChoice').append("<div id='orange' class='color'></div>");
+    $('.urOChoice').append("<div id='orange' class='color center-block'></div>");
     attachEvents();
-    $oBut.css('display', 'none');
-    $('.orButton').css('display', 'none');
-    $('.obButton').css('display', 'none');
+   $('.chooseO').css('display', 'none');
   });
   
   attachEvents();
@@ -97,19 +93,19 @@ $(document).ready(function(){
 
 function attachEvents(){
 	$('.color').on('click', function () {
-    console.log(this);
+	console.log(this);
     var $el = $(this); // why is this the .color function instead of the window?
     // this is set to the elment
     var colorState = colors[this.id];
     if (this.id === 'red') {
-      colorState.opacity = colorState.opacity / 2;
+      colorState.opacity = colorState.opacity / 1.8;
     } else if (this.id === 'blue') {
-      colorState.opacity = colorState.opacity / 2.5;
+      colorState.opacity = colorState.opacity / 1.9;
     } else if (this.id === 'orange') {
-      colorState.opacity = colorState.opacity / 1.5;
+      colorState.opacity = colorState.opacity / 2;
     }
-    if (colorState.opacity < 0.03) {
-    	alert("you lose!");
+    if (colorState.opacity < 0.08 ) {
+    	alert(this.id + " loses!");
     	reset();
     }
     console.log(colorState);
@@ -118,10 +114,19 @@ function attachEvents(){
 }
 
 function reset(){
-	$('.rButton').css('display', 'initial');
-	$('.bButton').css('display', 'initial');
-	$('.oButton').css('display', 'initial');
+	$('.choose').css('display', 'initial');
 	$('.urChoice').find('div').remove();
+	$('.urOChoice').find('div').remove();
+	$('.oButton').css('display', 'initial');
+	$('.bButton').css('display', 'initial');
+	$('.rButton').css('display', 'initial');
+	$('.ooButton').css('display', 'initial');
+	$('.obButton').css('display', 'initial');
+	$('.orButton').css('display', 'initial');
+	colors.blue.opacity = 1;
+	colors.red.opacity = 1;
+	colors.orange.opacity = 1;
+	
 }
 
 // I want all of the characters to be colors and to have life points and when their life points run out they get erased (fade out) and everytime they lose points they go down a shade

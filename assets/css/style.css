@@ -1,3 +1,11 @@
+body{
+	background: url(../img/yellowbg.jpg) no-repeat center top;
+	text-align: center;
+	color: white;
+}
+.container{
+	color: white;
+}
 #blue{
 	width:100px;
 	height:100px;
@@ -36,4 +44,31 @@
 	height: 50px;
 	width: 50px;
 	color: white;
+}
+.obButton{
+	background-color: blue;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
+.orButton{
+	background-color: red;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
+.ooButton{
+	background-color: orange;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
+.urOChoice, .urChoice {
+	margin: 0 auto;
+}
+.chooseO{
+	display: none;
 }
