@@ -1,0 +1,39 @@
+#blue{
+	width:100px;
+	height:100px;
+	background-color:blue;
+	margin-bottom: 10px;
+}
+#red{
+	width:100px;
+	height:100px;
+	background-color:red;
+	margin-bottom: 10px;
+}
+#orange{
+	width:100px;
+	height:100px;
+	background-color:orange;
+	margin-bottom: 10px;
+}
+.bButton{
+	background-color: blue;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
+.rButton{
+	background-color: red;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
+.oButton{
+	background-color: orange;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: white;
+}
