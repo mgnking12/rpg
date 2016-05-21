@@ -55,6 +55,7 @@ $(document).ready(function(){
     $('.urOChoice').append("<div id='blue' class='color center-block'></div>");
     attachEvents();
     $('.chooseO').css('display', 'none');
+    $('.click').css('display', 'inline-block');
   });
   
   $('.orButton').on('click', function(){
@@ -63,6 +64,7 @@ $(document).ready(function(){
     $('.urOChoice').append("<div id='red' class='color center-block'></div>");
     attachEvents();
     $('.chooseO').css('display', 'none');
+    $('.click').css('display', 'inline-block');
   });
 
   $('.ooButton').on('click', function(){
@@ -71,6 +73,7 @@ $(document).ready(function(){
     $('.urOChoice').append("<div id='orange' class='color center-block'></div>");
     attachEvents();
    $('.chooseO').css('display', 'none');
+   $('.click').css('display', 'inline-block');
   });
   
   attachEvents();
@@ -123,9 +126,11 @@ function reset(){
 	$('.ooButton').css('display', 'initial');
 	$('.obButton').css('display', 'initial');
 	$('.orButton').css('display', 'initial');
+	$('.click').css('display', 'none');
 	colors.blue.opacity = 1;
 	colors.red.opacity = 1;
 	colors.orange.opacity = 1;
+
 	
 }
 
